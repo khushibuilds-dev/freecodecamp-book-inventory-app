@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #1e293b;
+  padding: 30px 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #0f172a;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Row attribute selectors */
+tr[class="read"] {
+  background-image: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 100%);
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+}
+
+/* Span display rule */
+span {
+  display: inline-block;
+}
+
+/* Status badge styles */
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid #e11d48;
+  background-image: linear-gradient(135deg, #fb7185 0%, #e11d48 100%);
+  color: #ffffff;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid #16a34a;
+  background-image: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+  color: #ffffff;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid #d97706;
+  background-image: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  color: #ffffff;
+}
+
+/* Status and Rate box sizing */
+span[class="status"], span[class^="rate"] {
+  height: 28px;
+  width: 110px;
+  padding: 4px 8px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* Rating inner dots/bars */
+span[class^="rate"] > span {
+  border: 1px solid #94a3b8;
+  border-radius: 50%;
+  margin: 2px 3px;
+  height: 14px;
+  width: 14px;
+  background-color: #cbd5e1;
+}
+
+/* Rating 1, 2, 3 fills */
+span[class~="one"] span:first-of-type {
+  background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+span[class~="two"] span:nth-of-type(-n+2) {
+  background-image: linear-gradient(135deg, #f355da 0%, #7000ff 100%);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+}
